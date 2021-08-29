@@ -1,6 +1,7 @@
 package com.codewithmosh;
 
-import com.codewithmosh.strategy.Demo;
+//import com.codewithmosh.strategy.Demo;
+import com.codewithmosh.template.Demo;
 
 public class Main {
 
