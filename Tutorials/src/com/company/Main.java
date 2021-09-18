@@ -6,9 +6,10 @@ import com.company.iterator.Demo;
 import com.company.strategy.StrategyDemo;
 import com.company.template.TemplateDemo;
 import com.company.command.CommandDemo;
+import com.company.observer.ObserverDemo;
 
 public class Main {
     public static void main(String[] args) {
-        CommandDemo.show();
+        ObserverDemo.show();
     }
 }

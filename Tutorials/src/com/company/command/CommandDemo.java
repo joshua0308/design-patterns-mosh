@@ -16,9 +16,6 @@ public class CommandDemo {
         boldCommand.execute();
         System.out.println(document.getContent());
 
-//        boldCommand.unexecute();
-//        System.out.println(document.getContent());
-
         var undoCommand = new UndoCommand(history);
         undoCommand.execute();
         System.out.println(document.getContent());
