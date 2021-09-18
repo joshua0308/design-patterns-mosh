@@ -17,6 +17,7 @@ public class BoldCommand implements UndoableCommand {
         history.push(this);
     }
 
+    // Invoke through UndoCommand using History
     @Override
     public void unexecute() {
         document.setContent(prevContent);
