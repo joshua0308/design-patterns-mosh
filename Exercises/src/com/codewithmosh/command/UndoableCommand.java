@@ -1,5 +1,5 @@
 package com.codewithmosh.command;
 
-public interface UndoableCommand {
-    void unexecute();
+public interface UndoableCommand extends Command {
+    public void undo();
 }

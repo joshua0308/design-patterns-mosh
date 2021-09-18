@@ -1,24 +1,22 @@
 package com.codewithmosh.command;
 
-public class SetContrastCommand implements FloatCommand, UndoableCommand {
-    private VideoEditor editor;
-    private History history;
+public class SetContrastCommand extends AbstractUndoableCommand {
     private Float prevContent;
+    private Float contrast;
 
-    public SetContrastCommand(VideoEditor editor, History history) {
-        this.editor = editor;
-        this.history = history;
+    public SetContrastCommand(Float contrast, VideoEditor editor, History history) {
+        super(editor, history);
+        this.contrast = contrast;
     }
 
     @Override
-    public void execute(Float contrast) {
+    protected void doExecute() {
         prevContent = editor.getContrast();
         editor.setContrast(contrast);
-        history.push(this);
     }
 
     @Override
-    public void unexecute() {
+    public void undo() {
         editor.setContrast(prevContent);
     }
 }

@@ -5,21 +5,22 @@ public class Demo {
         var editor = new VideoEditor();
         var history = new History();
 
-        editor.setText("foo");
-        editor.setContrast(0.5f);
+        System.out.println(editor.toString());
 
-        var setTextCommand = new SetTextCommand(editor, history);
-        var setContrastCommand = new SetContrastCommand(editor, history);
+        var setTextCommand = new SetTextCommand("hello", editor, history);
+        var setContrastCommand = new SetContrastCommand(3.5f, editor, history);
         var undoCommand = new UndoCommand(history);
 
-        setTextCommand.execute("hello");
-        setContrastCommand.execute(3.5f);
-        System.out.println(editor.toString());
+        setTextCommand.execute();
+        System.out.println("setTextCommand " + editor.toString());
+
+        setContrastCommand.execute();
+        System.out.println("setContrastCommand " + editor.toString());
 
         undoCommand.execute();
-        System.out.println(editor.toString());
+        System.out.println("undoCommand " + editor.toString());
 
         undoCommand.execute();
-        System.out.println(editor.toString());
+        System.out.println("undoCommand " + editor.toString());
     }
 }

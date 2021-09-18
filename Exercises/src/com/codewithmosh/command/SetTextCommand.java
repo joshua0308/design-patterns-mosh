@@ -1,25 +1,20 @@
 package com.codewithmosh.command;
 
-public class SetTextCommand implements TextCommand, UndoableCommand {
-    private VideoEditor editor;
-    private History history;
-    private String prevContent;
+public class SetTextCommand extends AbstractUndoableCommand {
+    private String text;
 
-    public SetTextCommand(VideoEditor editor, History history) {
-        this.editor = editor;
-        this.history = history;
+    public SetTextCommand(String text, VideoEditor editor, History history) {
+        super(editor, history);
+        this.text = text;
     }
 
     @Override
-    public void execute(String text) {
-        prevContent = editor.getText();
+    protected void doExecute() {
         editor.setText(text);
-        history.push(this);
     }
 
-
     @Override
-    public void unexecute() {
-        editor.setText(prevContent);
+    public void undo() {
+        editor.removeText();
     }
 }

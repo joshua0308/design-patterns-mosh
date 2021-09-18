@@ -8,8 +8,6 @@ public class VideoEditor {
         this.text = text;
     }
 
-    public String getText() { return text; }
-
     public void removeText() {
         this.text = "";
     }
