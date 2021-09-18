@@ -1,6 +1,6 @@
-package com.company.observer;
+package com.company.observerPush;
 
-public class ObserverDemo {
+public class ObserverPushDemo {
     public static void show() {
         var dataSource = new DataSource();
         var sheet1 = new SpreadSheet();

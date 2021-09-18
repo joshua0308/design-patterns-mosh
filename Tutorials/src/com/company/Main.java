@@ -1,15 +1,10 @@
 package com.company;
 
-import com.company.memento.MementoDemo;
-import com.company.state.StateDemo;
-import com.company.iterator.Demo;
-import com.company.strategy.StrategyDemo;
-import com.company.template.TemplateDemo;
-import com.company.command.CommandDemo;
-import com.company.observer.ObserverDemo;
+import com.company.observerPull.ObserverPullDemo;
+import com.company.observerPush.ObserverPushDemo;
 
 public class Main {
     public static void main(String[] args) {
-        ObserverDemo.show();
+        ObserverPullDemo.show();
     }
 }

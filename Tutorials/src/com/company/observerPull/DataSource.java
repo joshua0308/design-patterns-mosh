@@ -1,4 +1,4 @@
-package com.company.observer;
+package com.company.observerPull;
 
 import java.util.ArrayList;
 
@@ -13,6 +13,6 @@ public class DataSource extends Subject {
 
     public void setValue(int value) {
         this.value = value;
-        notifyObservers(value);
+        notifyObservers();
     }
 }

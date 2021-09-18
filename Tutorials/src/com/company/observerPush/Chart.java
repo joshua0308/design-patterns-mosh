@@ -1,4 +1,4 @@
-package com.company.observer;
+package com.company.observerPush;
 
 public class Chart implements Observer {
     @Override
