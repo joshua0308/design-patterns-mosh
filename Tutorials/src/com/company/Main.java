@@ -1,10 +1,11 @@
 package com.company;
 
 import com.company.observerPull.ObserverPullDemo;
-import com.company.observerPush.ObserverPushDemo;
+import com.company.mediator.MediatorDemo;
+import com.company.mediatorUsingObserver.MediatorUsingObserverDemo;
 
 public class Main {
     public static void main(String[] args) {
-        ObserverPullDemo.show();
+        MediatorUsingObserverDemo.show();
     }
 }
